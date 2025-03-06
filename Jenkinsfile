@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/santten/lectdemo0603tripcost.git'
+                git branch: 'main', url: 'https://github.com/santten/lectdemo0603tripcost.git'
             }
         }
         stage('Build') {
