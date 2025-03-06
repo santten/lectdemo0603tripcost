@@ -1,6 +1,11 @@
 pipeline {
     agent any
-     environment {
+    tools {
+        jdk 'jdk21'
+        maven 'maven399'
+    }
+    
+    environment {
             DOCKERHUB_CREDENTIALS_ID = 'Docker_Hub_ID_Jenkins'
             DOCKERHUB_REPO = 'santten/lectdemo0603tripcost'
             DOCKER_IMAGE_TAG = 'latest_v1'
